@@ -9,6 +9,8 @@ import { ResultsService } from 'src/app/services/results-service.service';
 })
 export class MainGameComponent {
 
+  value: String = '';
+
   constructor(private resultsService: ResultsService) {
     this.ngOnInit();
   };

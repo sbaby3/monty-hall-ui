@@ -15,7 +15,7 @@ export class ResultsService {
 
   getResults(): Observable<ResultsResponse> {
     let params = new HttpParams();
-    params.set("totalGames", '1000');
-    return this.httpClient.get<ResultsResponse>(`${this.apiUrl}/getResults`)
+    params = params.append('totalGames', 456789);
+    return this.httpClient.get<ResultsResponse>(`${this.apiUrl}/getResults`, {params: params});
   }
 }
