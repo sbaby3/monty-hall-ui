@@ -10,7 +10,8 @@ import { ResultsService } from 'src/app/services/results-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 
 
@@ -27,7 +28,8 @@ import {MatIconModule} from '@angular/material/icon';
     HttpClientModule,
     MatInputModule,
     FormsModule,
-    MatIconModule
+    MatFormFieldModule
+  
   ],
   providers: [ResultsService],
   bootstrap: [AppComponent]

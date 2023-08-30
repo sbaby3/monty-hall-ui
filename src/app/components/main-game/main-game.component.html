@@ -1,15 +1,24 @@
+<!-- <div class="top-page">
 
-<div class="search-form">
-    <mat-form-field class="example-form-field">
-        <mat-label>Clearable input</mat-label>
-        <input matInput type="text" [(ngModel)]="value">
-        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-        <mat-icon>close</mat-icon>
-        </button>
-    </mat-form-field>
-
+</div> -->
+<div class="middle-page">
     <div>
-        <button mat-raised-button (click)='onSubmit()'>Click for results</button>
+        <form (ngSubmit)="onSubmit()">
+            <div class="total-games-input">
+                <mat-form-field>
+                    <mat-label>Total Games</mat-label>
+                    <input name="totalGmesInput" #totalGamesInput matInput type="number" value=100 [(ngModel)]="this.totalGames">
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button type="submit" color="primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="response-display">
+
     </div>
 </div>
-
+<!-- <div class="bottom-page">
+    
+</div> -->

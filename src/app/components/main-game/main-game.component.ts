@@ -9,7 +9,7 @@ import { ResultsService } from 'src/app/services/results-service.service';
 })
 export class MainGameComponent {
 
-  value: String = '';
+  totalGames: number = 100;
 
   constructor(private resultsService: ResultsService) {
     this.ngOnInit();
@@ -18,8 +18,8 @@ export class MainGameComponent {
 
   }
   onSubmit() {
-    console.log("submit called");
-    this.resultsService.getResults().subscribe();
+    console.log("submit called with totalGames: " + this.totalGames);
+    this.resultsService.getResults(this.totalGames).subscribe();
 
   }
 }

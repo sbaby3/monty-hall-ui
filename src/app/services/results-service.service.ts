@@ -13,9 +13,9 @@ export class ResultsService {
 
   apiUrl = 'http://localhost:8080';
 
-  getResults(): Observable<ResultsResponse> {
+  getResults(totalGames: number): Observable<ResultsResponse> {
     let params = new HttpParams();
-    params = params.append('totalGames', 456789);
+    params = params.append('totalGames', totalGames);
     return this.httpClient.get<ResultsResponse>(`${this.apiUrl}/getResults`, {params: params});
   }
 }
