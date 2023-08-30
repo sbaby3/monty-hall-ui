@@ -10,16 +10,32 @@ import { ResultsService } from 'src/app/services/results-service.service';
 export class MainGameComponent {
 
   totalGames: number = 100;
+  totalGamesResult: number = -1;
+  winsWithoutSwitching: number = -1;
+  winsWithSwitching: number = -1;
+
+  displayResults: boolean = false;
+
 
   constructor(private resultsService: ResultsService) {
     this.ngOnInit();
   };
+
   ngOnInit() {
 
   }
-  onSubmit() {
-    console.log("submit called with totalGames: " + this.totalGames);
-    this.resultsService.getResults(this.totalGames).subscribe();
 
+  onSubmit() {
+    this.resultsService.getResults(this.totalGames).subscribe((resultsResponse) => {
+      this.displayResults = true;
+      this.totalGamesResult = resultsResponse.totalGamesResult;
+      this.winsWithoutSwitching = resultsResponse.winsWithoutSwitching;
+      this.winsWithSwitching = resultsResponse.winsWithSwitching;
+    }
+    );
+  }
+
+  onClear() {
+    this.displayResults = false;
   }
 }

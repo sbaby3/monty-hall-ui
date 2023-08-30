@@ -1,5 +1,5 @@
 export type ResultsResponse =  {
-    totalGames: number;
+    totalGamesResult: number;
     winsWithoutSwitching: number;
     winsWithSwitching: number;
 }

@@ -3,14 +3,27 @@
   opacity: 0.1;
 } */
 
-.middle-page {
-  display: flex;
-  justify-content: center;
+.input-form {
+  /* display: flex;
+  justify-content: center; */
   /* align-items: center; */
-  padding: 25%;
+  padding: 10%;
+  padding-bottom: 5%;
   text-align: center;
 }
 
 .total-games-input {
   height: 4rem;
 }
+
+.response-display {
+  margin-left: 10%;
+  margin-right: 10%;
+  /* margin-top: 1%; */
+  /* text-decoration-color: aliceblue; */
+  /* text-align: center; */
+}
+
+/* mat-card {
+  text
+} */
