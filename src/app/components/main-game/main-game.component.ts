@@ -15,6 +15,7 @@ export class MainGameComponent {
   winsWithSwitching: number = -1;
 
   displayResults: boolean = false;
+  displaySpinner: boolean = false;
 
 
   constructor(private resultsService: ResultsService) {
@@ -26,12 +27,15 @@ export class MainGameComponent {
   }
 
   onSubmit() {
+    this.displayResults = true;
+    this.displaySpinner = true;
     this.resultsService.getResults(this.totalGames).subscribe((resultsResponse) => {
-      this.displayResults = true;
-      this.totalGamesResult = resultsResponse.totalGamesResult;
-      this.winsWithoutSwitching = resultsResponse.winsWithoutSwitching;
-      this.winsWithSwitching = resultsResponse.winsWithSwitching;
-    }
+        this.displayResults = true;
+        this.totalGamesResult = resultsResponse.totalGamesResult;
+        this.winsWithoutSwitching = resultsResponse.winsWithoutSwitching;
+        this.winsWithSwitching = resultsResponse.winsWithSwitching;
+        this.displaySpinner = false;
+      }
     );
   }
 

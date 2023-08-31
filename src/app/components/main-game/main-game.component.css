@@ -19,11 +19,20 @@
 .response-display {
   margin-left: 10%;
   margin-right: 10%;
+  color: white;
   /* margin-top: 1%; */
   /* text-decoration-color: aliceblue; */
   /* text-align: center; */
 }
 
-/* mat-card {
-  text
+mat-card-header {
+  color: #ffffffb3;
+}
+
+mat-card-content {
+  color: rgba(255, 255, 255, .7);
+}
+
+/* mat-spinner {
+  justify-content: center;
 } */
