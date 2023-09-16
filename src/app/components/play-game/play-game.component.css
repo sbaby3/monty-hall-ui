@@ -9,5 +9,9 @@
     margin-left: 30%;
     margin-right: 30%;
     color: white;
-    margin-top: 5%;
+    margin-top: 1%;
+}
+
+.all-doors button {
+    margin: 1%;
 }
