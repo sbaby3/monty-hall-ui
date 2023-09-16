@@ -17,7 +17,7 @@ export class PlayGameComponent {
   enabledDoors: boolean[] = [true, true, true];
   initialClick: boolean = true;
   gameTextArray: String[] = [
-    'Choose a door',
+    'Try and choose the correct door',
     'Interesting choice!',
     'Im gonna help you a little',
     'I have removed one of the wrong doors',
