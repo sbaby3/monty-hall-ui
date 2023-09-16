@@ -105,7 +105,7 @@ export class PlayGameComponent {
       disabledDoor = doorList[0];
     } else {
       for (let i = 0; i < doorList.length; i++) {
-        if (doorList[i] != this.correctDoor || doorList[i] != selectedDoor) {
+        if (doorList[i] != this.correctDoor && doorList[i] != selectedDoor) {
           disabledDoor = doorList[i];
           break;
         }
