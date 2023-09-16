@@ -5,3 +5,7 @@
     margin-left: 2%;
     /* flex: 1 1 auto; */
 }
+
+.active {
+    background: #424242;
+}
