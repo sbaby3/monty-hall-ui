@@ -20,9 +20,9 @@ export class PlayGameComponent {
     'Choose a door',
     'Interesting choice!',
     'Im gonna help you a little',
-    'I have removed one of the other doors that is a wrong door',
-    'Now choose a door from one of the remaining ones',
-    'Correct! You Win',
+    'I have removed one of the wrong doors',
+    'Now which door do you think is correct?',
+    'Correct! You Win :)',
     'Wrong Door. You Lose :('
 
   ];
