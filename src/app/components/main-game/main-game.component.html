@@ -22,9 +22,9 @@
                 <mat-card-title>Results</mat-card-title>
             </mat-card-header>
             <mat-spinner *ngIf="displaySpinner"></mat-spinner>
-            <mat-card-content color="warn" *ngIf="!displaySpinner">Total Games: {{totalGamesResult}}</mat-card-content>
-            <mat-card-content color="warn" *ngIf="!displaySpinner">Wins Without Switching: {{winsWithoutSwitching}}</mat-card-content>
-            <mat-card-content color="warn" *ngIf="!displaySpinner">Wins With Switching: {{winsWithSwitching}}</mat-card-content>
+            <mat-card-content *ngIf="!displaySpinner">Total Games: {{totalGamesResult}}</mat-card-content>
+            <mat-card-content *ngIf="!displaySpinner">Wins Without Switching: {{winsWithoutSwitching}}</mat-card-content>
+            <mat-card-content *ngIf="!displaySpinner">Wins With Switching: {{winsWithSwitching}}</mat-card-content>
             <mat-card-actions align="end">
                 <button mat-flat-button color="primary" (click)="onClear()">Clear</button>
             </mat-card-actions>

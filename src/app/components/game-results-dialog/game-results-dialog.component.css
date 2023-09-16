@@ -1,0 +1,9 @@
+.results-dialog {
+    overflow-y: hidden;
+}
+
+button {
+    margin:0 auto;
+    display:block;
+    margin-bottom: 5%;
+}

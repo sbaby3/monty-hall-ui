@@ -1,0 +1,11 @@
+<div class="full-game">
+    <div class="all-doors">
+        <button mat-flat-button color="primary" disabled={{!enabledDoors[0]}} (click)="onDoorClicked(1)">Door 1</button>
+        <button mat-flat-button color="primary" disabled={{!enabledDoors[1]}} (click)="onDoorClicked(2)">Door 2</button>
+        <button mat-flat-button color="primary" disabled={{!enabledDoors[2]}} (click)="onDoorClicked(3)">Door 3</button>
+    </div>
+    <mat-card class="game-text">
+        <mat-card-content>{{gameText}}</mat-card-content>
+    </mat-card>
+    
+</div>

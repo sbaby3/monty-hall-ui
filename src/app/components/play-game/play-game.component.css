@@ -1,0 +1,14 @@
+.full-game {
+    padding-top: 20%;
+    /* padding-left: 25%; */
+    /* padding: 25%; */
+    text-align: center;
+}
+
+.game-text {
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+    margin-top: 5%;
+    
+}

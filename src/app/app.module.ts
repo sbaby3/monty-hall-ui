@@ -13,16 +13,23 @@ import { FormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-
-
-
-
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { PlayGameComponent } from './components/play-game/play-game.component';
+import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
+import { GameResultsDialogComponent } from './components/game-results-dialog/game-results-dialog.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainGameComponent
+    MainGameComponent,
+    NavBarComponent,
+    PlayGameComponent,
+    GameResultsDialogComponent,
+  ],
+  entryComponents: [
+    GameResultsDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -34,10 +41,18 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     FormsModule,
     MatFormFieldModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatToolbarModule,
+    MatDialogModule
   
   ],
-  providers: [ResultsService],
+  providers: [
+    ResultsService,
+    {
+      provide: MatDialogRef,
+      useValue: {}
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
